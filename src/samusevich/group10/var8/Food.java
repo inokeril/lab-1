@@ -2,7 +2,7 @@ package samusevich.group10.var8;
 
 import java.util.Objects;
 
-public abstract class Food implements Consumable {
+public abstract class Food implements Consumable,Nutritious {
 
     String name=null;
 
@@ -10,6 +10,7 @@ public abstract class Food implements Consumable {
     public Food(String name) {
         this.name = name;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -29,9 +30,11 @@ public abstract class Food implements Consumable {
 
     @Override
     public String toString() {
-        return "Food{" +
-                "name='" + name + '\'' +
-                '}';
+        return name;
     }
+
+// Реализация метода consume() удалена из базового класса Food
+// Это можно сделать, потому что сам Food - абстрактный
+
 
 }
